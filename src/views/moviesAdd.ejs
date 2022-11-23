@@ -19,15 +19,25 @@
               <ul class="errores"></ul>
               <form class="form" action="/movies/create" method="POST">
                   <label for="title">Titulo </label>
-                  <div><input type="text" name="title" id="title" ></div>
+                  <div><input type="text" name="title" id="title" >
+                    <div><span class="titleError"></span></div>
+                  </div>
                   <label for="rating">Calificación </label>
-                  <div><input type="number" name="rating" id="rating" placeholder="Indicar valor entre 0 y 10"> </div>
+                  <div><input type="number" name="rating" id="rating" placeholder="Indicar valor entre 0 y 10">
+                    <div><span class="ratingError"></span></div>
+                </div>
                 <label for="awards">Premios </label>
-                <div><input type="number" name="awards" id="awards" placeholder="Indicar valor entre 0 y 10"></div>
+                <div><input type="number" name="awards" id="awards" placeholder="Indicar valor entre 0 y 10">
+                    <div><span class="awardsError"></span></div>
+                </div>
                 <label for="release_date">Fecha de creación </label>
-                <div><input type="date" name="release_date" id="release_date" ></div>
+                <div><input type="date" name="release_date" id="release_date" >
+                    <div><span class="ReleaseError"></span></div>
+                </div>
                 <label for="length">Duración </label>
-                <div><input type="number" name="length" id="length" placeholder="Indicar duración entre 60 y 360 minutos" ></div>
+                <div><input type="number" name="length" id="length" placeholder="Indicar duración entre 60 y 360 minutos" >
+                    <div><span class="lengthError"></span></div>
+                </div>
                 <label for="genreID">Género </label>
                 <div>
                     <select name="genre_id" id="genre_id" >
@@ -36,6 +46,7 @@
                         <option value="<%= genre.id %>"><%= genre.name %></option>
                         <% }); %>
                     </select>
+                    <div><span class="genreError"></span></div>
                 </div>
                 <br>
                 <div> <button class="botonAgregar" type="submit">Agregar</button>
